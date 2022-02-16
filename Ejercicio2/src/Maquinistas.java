@@ -20,8 +20,19 @@ visualizar sus datos.
  * @author yszee
  *
  */
-public class Administrativos extends Persona{
-private String estudiosAcademicos;
-private int numOrdenadores;
+public class Maquinistas extends Persona implements Importante{
+private int numMaquinas;
+private int anoMaquinas;
+
+public Maquinistas(String nombre,float sueldo, int edad, int numMaquinas, int anoMaquinas) {
+	super(nombre, sueldo, edad);
+	this.numMaquinas = numMaquinas;
+	this.anoMaquinas = anoMaquinas;
+}
+
+public void visualizarTodosDatos() {
+	super.visualizarTodosDatos();
+	System.out.print("\t" + "Numero Maquina: " + numMaquinas + "\t\t" + "Años con la máquina: " + anoMaquinas + "\t" + "Maquinista");
+}
 
 }

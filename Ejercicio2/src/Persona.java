@@ -20,6 +20,20 @@ visualizar sus datos.
  * @author yszee
  *
  */
-public class Maquinistas extends Persona{
+public class Persona implements Importante{
+private String nombre;
+private float sueldo;
+private int edad;
+
+public Persona(String nombre, float sueldo, int edad) {
+	this.nombre = nombre;
+	this.sueldo = sueldo;
+	this.edad = edad;
+}
+
+@Override
+public void visualizarTodosDatos() {
+System.out.print("Nombre: " + nombre + "\t" + "Edad: " + edad + "\t" + "Sueldo: " + sueldo +" € ");
+}
 
 }

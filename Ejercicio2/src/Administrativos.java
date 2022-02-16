@@ -20,10 +20,22 @@ visualizar sus datos.
  * @author yszee
  *
  */
-public class Persona {
-private String nombre;
-private float sueldo;
-private int edad;
+public class Administrativos extends Persona implements Importante{
+private String estudiosAcademicos;
+private int numOrdenadores;
 
+public void visualizarTodosDatos() {
+	super.visualizarTodosDatos();
+	System.out.print("\t" + "Estudios Academicos: " + estudiosAcademicos + "\t" + "Numero Ordenadores: " + numOrdenadores + "\t" +"Administrativos");
+}
+
+public Administrativos(String nombre, float sueldo,int edad, String estudiosAcademicos, int numOrdenadores) {
+	super(nombre, sueldo, edad);
+	this.estudiosAcademicos = estudiosAcademicos;
+	this.numOrdenadores = numOrdenadores;
+}
 
 }
+
+
+
